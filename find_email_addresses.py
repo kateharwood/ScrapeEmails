@@ -20,8 +20,6 @@ def find_internal_urls(url, orig_url, depth=0, max_depth=2):
                         url = "http:" + a_tag['href']
             elif "http" in a_tag["href"]:
                 url = a_tag["href"]
-            else:
-                continue
             if not url in all_page_urls:
                 all_page_urls.append(url)
     return all_page_urls
